@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
@@ -11,4 +11,7 @@ export class ShoppingListComponent {
     new Ingredient('Apples', '10'),
     new Ingredient('Mangoes', '20')
   ]
+  addIngredient(ingredient : Ingredient){
+    this.ingredients.push(ingredient)
+  }
 }
